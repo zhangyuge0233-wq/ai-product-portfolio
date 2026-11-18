@@ -54,6 +54,8 @@
 .gallery-controls button:hover{background:rgba(25,25,30,.68)}
 .gallery-count{position:absolute;width:1px;height:1px;overflow:hidden;clip-path:inset(50%);white-space:nowrap}
 .intro-title{white-space:nowrap;font-family:inherit;font-weight:300;font-style:normal}
+.profile-portrait{position:absolute;right:4%;bottom:72px;width:220px;height:220px;border-radius:50%;object-fit:cover;object-position:center 38%;display:block}
+@media(max-width:760px){.profile-portrait{position:static;width:140px;height:140px;margin:22px 0 18px auto}}
 .intro--profile h2{font-size:20px;line-height:1.4;font-weight:500;margin:0 0 18px}
 .intro--profile .profile-summary p{line-height:1.95;margin:0;font-size:14px;max-width:660px;color:#515769}
 .profile-history{margin-top:15px;font-size:12px;line-height:1.9}

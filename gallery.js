@@ -1,6 +1,6 @@
 (() => {
   const gallery = document.querySelector('#qianmian .media');
-  const trigger = gallery.querySelector('button');
+  const trigger = gallery.querySelector('.gallery-image');
   const picture = trigger.querySelector('img');
   const caption = gallery.querySelector('figcaption');
   const slides = [
@@ -24,7 +24,6 @@
     picture.removeAttribute('width');
     picture.removeAttribute('height');
     caption.textContent = 'Demo版本，具体功能与体验以上线版本为准。';
-    trigger.setAttribute('aria-label', '放大：' + slide.caption);
     controls.querySelector('span').textContent = (current + 1) + ' / ' + slides.length;
   }
   buttons[0].onclick = () => show(current - 1);

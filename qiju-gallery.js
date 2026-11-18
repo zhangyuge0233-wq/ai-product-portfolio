@@ -1,6 +1,6 @@
 (() => {
   const gallery = document.querySelector('#qiju .media');
-  const trigger = gallery.querySelector('button');
+  const trigger = gallery.querySelector('.gallery-image');
   const image = trigger.querySelector('img');
   const slides = [
     ['assets/qiju-home.jpg','栖居首页',''],
@@ -17,7 +17,6 @@
   function show(next) {
     index = (next + slides.length) % slides.length;
     image.src = slides[index][0]; image.alt = slides[index][1];
-    trigger.setAttribute('aria-label','放大：' + slides[index][1]);
     controls.querySelector('span').textContent = (index + 1) + ' / ' + slides.length;
   }
   const buttons = controls.querySelectorAll('button');

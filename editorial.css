@@ -20,15 +20,15 @@
 @media(max-width:800px){.product--qianmian .media{top:0}}
 .product .media figcaption{text-align:center}
 #qiju .media > button{width:fit-content;max-width:100%;margin-inline:auto}
-.qiju-gallery{width:min(100%,350px);aspect-ratio:3/4;border-radius:24px;margin-inline:auto;overflow:hidden;background:#faf9f5}
-#qiju .qiju-gallery > button{width:100%;height:100%;display:flex;align-items:center;justify-content:center}
+.qiju-gallery{width:min(100%,350px);aspect-ratio:390/754;border-radius:24px;margin-inline:auto;overflow:hidden;background:#faf9f5}
+#qiju .qiju-gallery > button{position:absolute;inset:0;width:100%;height:100%;display:flex;align-items:center;justify-content:center}
 #qiju .qiju-gallery img{width:100%;height:100%;max-height:none;object-fit:contain;box-shadow:none;border-radius:0}
 #qiju .media img{width:auto;max-width:100%;height:auto;max-height:600px;border-radius:24px;box-shadow:0 20px 48px rgba(44,35,80,.15),0 4px 14px rgba(44,35,80,.07)}
 .video-player{position:relative;width:min(100%,450px);margin-inline:auto;aspect-ratio:3/4;border-radius:24px;overflow:hidden;box-shadow:0 14px 40px rgba(30,25,20,.12)}
 .maomao-video{display:block;width:100%;height:100%;aspect-ratio:3/4;margin:0;background:#181713}
 .video-actions{position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);display:flex;flex-direction:column;align-items:center;gap:12px}
 .media .video-toggle{position:static;display:flex;align-items:center;justify-content:center;width:64px;height:64px;padding:0;border:0;background:transparent;cursor:pointer}
-.video-play-icon{display:flex;align-items:center;justify-content:center;width:64px;height:64px;padding-left:4px;border-radius:50%;background:rgba(25,25,30,.48);backdrop-filter:blur(6px);color:white;font-size:25px;transition:opacity .15s}
+.video-play-icon{display:flex;align-items:center;justify-content:center;width:64px;height:64px;padding:0;border-radius:50%;background:rgba(25,25,30,.48);backdrop-filter:blur(6px);color:white;transition:opacity .15s}
 .is-playing .video-actions{opacity:0;pointer-events:none}
 .video-toggle:focus-visible{outline-offset:4px}
 .media .video-replay{position:static;display:flex;align-items:center;justify-content:center;width:64px;height:64px;padding:0;border:0;border-radius:50%;background:rgba(25,25,30,.48);backdrop-filter:blur(6px);color:white;font-family:"Helvetica Neue",sans-serif;font-size:34px;font-weight:400;line-height:1;cursor:pointer}
@@ -48,7 +48,8 @@
 .process-content a{display:inline-block;border-bottom:1px solid #b9b9c5;font-size:13px}
 @media(max-width:800px){.video-player{width:min(100%,360px)}}
 .gallery-stage{position:relative;padding:0;box-shadow:0 18px 48px rgba(44,35,80,.12),0 3px 12px rgba(44,35,80,.05)}
-.product--qianmian .gallery-stage > button{aspect-ratio:16/9;background:#fafafd;display:flex;align-items:center;justify-content:center}
+.product--qianmian .gallery-stage{aspect-ratio:16/9}
+.product--qianmian .gallery-stage > button{position:absolute;inset:0;width:100%;height:100%;background:#fafafd;display:flex;align-items:center;justify-content:center}
 .product--qianmian .gallery-stage > button img{width:100%;height:100%;max-height:none;object-fit:cover;filter:none}
 .gallery-controls{position:absolute;inset:0;pointer-events:none}
 .gallery-controls button{position:absolute;top:50%;transform:translateY(-50%);pointer-events:auto;width:44px;height:44px;border:0;border-radius:50%;background:rgba(25,25,30,.45);color:#fff;backdrop-filter:blur(6px);cursor:pointer;font-size:23px;line-height:1;display:flex;align-items:center;justify-content:center;transition:background .15s}
@@ -56,6 +57,9 @@
 .gallery-controls button:last-child{right:18px}
 .gallery-controls button:hover{background:rgba(25,25,30,.68)}
 .gallery-count{position:absolute;width:1px;height:1px;overflow:hidden;clip-path:inset(50%);white-space:nowrap}
+.gallery-controls button svg,.video-play-icon svg{display:block;flex:none}
+.process-link,.process-content a{display:inline-flex;align-items:center;gap:20px}
+.process-link svg,.process-content a svg{display:block;width:18px;height:18px;flex:none}
 .intro-title{white-space:nowrap;font-family:inherit;font-weight:300;font-style:normal}
 .profile-portrait{position:absolute;right:4%;bottom:72px;width:220px;height:220px;border-radius:50%;object-fit:cover;object-position:center 38%;display:block}
 @media(max-width:760px){.profile-portrait{position:static;width:140px;height:140px;margin:22px 0 18px auto}}

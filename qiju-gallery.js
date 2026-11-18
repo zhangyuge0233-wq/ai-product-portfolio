@@ -11,14 +11,13 @@
   const stage = document.createElement('div'); stage.className = 'gallery-stage qiju-gallery';
   trigger.before(stage); stage.append(trigger);
   const controls = document.createElement('div'); controls.className = 'gallery-controls';
-  controls.innerHTML = '<button type="button" aria-label="栖居上一张图片">‹</button><span class="gallery-count" aria-live="polite"></span><button type="button" aria-label="栖居下一张图片">›</button>';
+  controls.innerHTML = '<button type="button" aria-label="栖居上一张图片"><svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 6l-6 6 6 6"/></svg></button><span class="gallery-count" aria-live="polite"></span><button type="button" aria-label="栖居下一张图片"><svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M10 6l6 6-6 6"/></svg></button>';
   stage.append(controls);
-  const caption = document.createElement('figcaption'); gallery.append(caption);
+  gallery.querySelectorAll('figcaption').forEach(caption => caption.remove());
   function show(next) {
     index = (next + slides.length) % slides.length;
     image.src = slides[index][0]; image.alt = slides[index][1];
     trigger.setAttribute('aria-label','放大：' + slides[index][1]);
-    caption.textContent = slides[index][2]; caption.hidden = !slides[index][2];
     controls.querySelector('span').textContent = (index + 1) + ' / ' + slides.length;
   }
   const buttons = controls.querySelectorAll('button');

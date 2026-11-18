@@ -1,6 +1,7 @@
 document.querySelectorAll('.video-player').forEach(player => {
   const video = player.querySelector('video');
   const button = player.querySelector('.video-toggle');
+  button.querySelector('.video-play-icon').innerHTML = '<svg viewBox="0 0 24 24" width="30" height="30" fill="currentColor" aria-hidden="true"><path d="M8 5v14l11-7Z"/></svg>';
   const title = player.closest('#ledger') ? '记账' : '毛毛日记';
   const replay = document.createElement('button');
   replay.type = 'button';

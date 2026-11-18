@@ -10,7 +10,7 @@
   let current = 0;
   const controls = document.createElement('div');
   controls.className = 'gallery-controls';
-  controls.innerHTML = '<button type="button" aria-label="上一张图片">‹</button><span aria-live="polite" class="gallery-count"></span><button type="button" aria-label="下一张图片">›</button>';
+  controls.innerHTML = '<button type="button" aria-label="上一张图片"><svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 6l-6 6 6 6"/></svg></button><span aria-live="polite" class="gallery-count"></span><button type="button" aria-label="下一张图片"><svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M10 6l6 6-6 6"/></svg></button>';
   const stage = document.createElement('div');
   stage.className = 'gallery-stage';
   trigger.before(stage);
